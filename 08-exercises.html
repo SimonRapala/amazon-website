@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise-08</title>
+  </head>
+  <body>
+    <script>
+        const basketBall = {
+            item: 'basketball',
+            price: 2095
+        };
+
+        const soccerBall = {
+            item: 'soccerball',
+            price: 2095
+        };
+        const soccerBall2 = soccerBall;
+        console.log(`$${basketBall.price/100}`);
+        basketBall.price += 500;
+        console.log(`$${basketBall.price/100}`);
+        basketBall[`delivery-time`] = '3 Days' ;
+        console.log(basketBall);
+
+
+
+        functions = {
+        compare(item1, item2){
+            if (item1.price > item2.price){
+                return item2.item;
+            }
+            else{
+                return item1.item;
+            }
+        },
+        isSameProduct(product1, product2){
+          if (product1 === product2){
+            return true
+          } 
+          else {
+            return false
+          }
+        }
+
+      }
+
+        const cheaper = functions.compare(basketBall, soccerBall);
+        console.log(cheaper);
+
+        const sameProduct = functions.isSameProduct(basketBall, soccerBall);
+        const sameProduct2 = functions.isSameProduct(soccerBall2, soccerBall);
+        console.log(sameProduct, sameProduct2);
+        console.log('GOOD MOrning!!!'.toLowerCase());
+    </script>
+  </body>
+</html>
