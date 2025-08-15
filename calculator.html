@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+  </head>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      width: 35%;
+      height: 100%;
+      border: 3px solid black;
+      padding: 0;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      gap: 0;
+    }
+
+    .grid-container button {
+      height: 70px;
+      margin: 0;
+      padding: 0;
+      border: 1px solid black;
+      font-size: 24px;
+    }
+
+    .button-1 {
+      background-color: red;
+      color: white;
+    }
+    .button-2 {
+      background-color: rgb(255, 0, 179);
+      color: white;
+    }
+    .button-3 {
+      background-color: blue;
+      color: white;
+    }
+    .button-4 {
+      background-color: purple;
+      color: white;
+    }
+    .button-5 {
+      background-color: rgb(12, 192, 12);
+      color: white;
+    }
+    .button-6 {
+      background-color: black;
+      color: white;
+    }
+    .button-7 {
+      background-color: brown;
+      color: white;
+    }
+    .button-8 {
+      background-color: rgb(0, 255, 187);
+      color: white;
+    }
+    .button-9 {
+      background-color: rgb(3, 234, 255);
+      color: white;
+    }
+    .button-equal {
+      grid-column: 1/4;
+      height: 70px;
+    }
+    .display-screen {
+      grid-column: 1/5;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 40px;
+    }
+  </style>
+  <body>
+    <div class="grid-container">
+      <p id="result" class="display-screen"></p>
+      <button
+        class="button-1"
+        onclick="
+    handleClick('1');
+    "
+      >
+        1
+      </button>
+      <button
+        class="button-2"
+        onclick="
+    handleClick('2');
+    "
+      >
+        2
+      </button>
+      <button
+        class="button-3"
+        onclick="
+    handleClick('3');
+    "
+      >
+        3
+      </button>
+      <button
+        class="button-add"
+        onclick="
+    handleClick('+');
+    "
+      >
+        +
+      </button>
+      <button
+        class="button-4"
+        onclick="
+    handleClick('4');
+    "
+      >
+        4
+      </button>
+      <button
+        class="button-5"
+        onclick="
+    handleClick('5');
+    "
+      >
+        5
+      </button>
+      <button
+        class="button-6"
+        onclick="
+    handleClick('6');
+    "
+      >
+        6
+      </button>
+      <button
+        class="button-subtract"
+        onclick="
+    handleClick('-');
+    "
+      >
+        -
+      </button>
+      <button
+        class="button-7"
+        onclick="
+    handleClick('7');
+    "
+      >
+        7
+      </button>
+      <button
+        class="button-8"
+        onclick="
+    handleClick('8');
+    "
+      >
+        8
+      </button>
+      <button
+        class="button-9"
+        onclick="
+    handleClick('9');
+    "
+      >
+        9
+      </button>
+      <button
+        class="button-multiply"
+        onclick="
+    handleClick('*');
+    "
+      >
+        x
+      </button>
+      <button
+        class="button-equal"
+        onclick="
+    handleClick('=');
+    "
+      >
+        =
+      </button>
+
+      <button
+        class="button-divide"
+        onclick="
+    handleClick('/');
+    "
+      >
+        ÷
+      </button>
+    </div>
+
+    <button class="button-AC" onclick="handleClick('AC')">AC</button>
+
+    <script>
+      let expression = ''
+      function handleClick(addToExpression){
+        if (addToExpression === 'AC'){
+          expression = '';
+          document.getElementById('result').textContent = '';
+        }
+        else if (addToExpression === '='){
+          try {
+            let result = eval(expression);
+            document.getElementById('result').textContent = 'Result: ' + result.toFixed(4);
+            expression = result;
+            console.log(expression);
+          } 
+          catch (error) {
+            document.getElementById('result').textContent = 'Invalid expression';
+          expression = ''
+        }
+        
+      }
+        else {
+        expression = expression + addToExpression;
+        document.getElementById('result').textContent = expression;
+        }
+      }
+      document.getElementById('result').textContent = '';
+    </script>
+  </body>
+</html>
