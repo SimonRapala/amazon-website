@@ -6,9 +6,7 @@
 <body>
 
     <button>button</button>
-    <button class="js-button">button2
-        
-    </button>
+    <button class="js-button">button2</button>
     <script>
         console.log(document.querySelector('button').innerHTML);
         document.querySelector('button').innerHTML = 'changed';
@@ -17,6 +15,7 @@
 
         const buttonElement = document.querySelector('.js-button');
         console.log(buttonElement);
+        document.querySelector('.js-button').innerHTML = 'NEW CHANGE';
         /*console.log(document.title);
         document.title = 'Changed';
         console.log(document.body);
