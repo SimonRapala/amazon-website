@@ -1,0 +1,44 @@
+<!DOCTYPE >
+<html>
+<head>
+  <title>HTML, CSS and JavaScript</title>
+  <style>
+    .js-button{
+      background-color: rgb(255, 216, 20);
+      padding: 7px 25px 7px 25px;
+      border-radius: 14px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .added-button{
+      color: white;
+      background-color: darkgray;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <button class="add-button js-button" onclick="added();">
+    Add To Cart
+  </button>
+
+  <script>
+    function added(){
+
+      const addedButton = document.querySelector(".add-button");
+
+      if (addedButton.innerText === "Add To Cart"){
+        addedButton.innerText = "Added";
+        addedButton.classList.add("added-button");
+      } 
+      else {
+        addedButton.innerText = "Add To Cart";
+        addedButton.classList.remove("added-button");
+      }
+    }
+  </script>
+</body>
+</html>
