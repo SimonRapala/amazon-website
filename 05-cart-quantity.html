@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart Quantity</title>
-  <style>
-    
-  </style>
-
+    <style></style>
   </head>
-  
+
   <body>
     <h2>Cart Quantity</h2>
-    <button onclick=
-    "console.log('Cart Quantity:', cartNum);">Show Quantity</button>
-    <button onclick=
-    "cartNum = cartNum + 1;
-    console.log('Cart Quantity:', cartNum);">Add to cart</button>
-    <button onclick=
-    "cartNum = cartNum + 2;
-    console.log('Cart Quantity:', cartNum);">+2</button>
-    <button onclick=
-    "cartNum = cartNum + 3;
-    console.log('Cart Quantity:', cartNum);">+3</button>
-    <button onclick=
-    "cartNum = 0;
+    <button onclick="console.log('Cart Quantity:', cartNum);">
+      Show Quantity
+    </button>
+    <button
+      onclick="cartNum = cartNum + 1;
+    console.log('Cart Quantity:', cartNum);"
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="cartNum = cartNum + 2;
+    console.log('Cart Quantity:', cartNum);"
+    >
+      +2
+    </button>
+    <button
+      onclick="cartNum = cartNum + 3;
+    console.log('Cart Quantity:', cartNum);"
+    >
+      +3
+    </button>
+    <button
+      onclick="cartNum = 0;
     console.log('Cart Was Reset')
-    console.log('Cart Quantity:', cartNum);;">Reset Cart</button>
-   
-      <script>
-        let cartNum = 0;
+    console.log('Cart Quantity:', cartNum);;"
+    >
+      Reset Cart
+    </button>
 
-      </script>
+    <script>
+      let cartNum = 0;
+    </script>
   </body>
 </html>
